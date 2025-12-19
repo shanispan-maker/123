@@ -1,243 +1,218 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<title>Mini Pan - Resume</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+    <meta charset="UTF-8">
+    <title>潘穎宣 - Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-body {
-background: #0f172a;
-color: #e5e7eb;
-line-height: 1.6;
-padding: 24px;
-}
+        body {
+            background: #ffeef4; /* 柔和粉底 */
+            color: #5b5b5b;
+            line-height: 1.7;
+            padding: 24px;
+        }
 
-.container {
-max-width: 900px;
-margin: 0 auto;
-background: #020617;
-border-radius: 16px;
-padding: 24px;
-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 28px rgba(255, 182, 193, 0.35);
+            border: 2px solid #ffd6e6;
+        }
 
-header {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-gap: 16px;
-border-bottom: 1px solid #1f2937;
-padding-bottom: 16px;
-margin-bottom: 20px;
-}
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            border-bottom: 2px solid #ffb6c9; /* 粉紅底線 */
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
 
-.avatar {
-width: 90px;
-height: 90px;
-border-radius: 50%;
-background: radial-gradient(circle at 30% 30%, #38bdf8, #4f46e5);
-}
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ffb6c9, #ff8fb0); /* 粉紅漸層 */
+        }
 
-h1 {
-font-size: 1.8rem;
-letter-spacing: 0.04em;
-}
+        h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.04em;
+            color: #ff6f9c;
+        }
 
-.tagline {
-font-size: 0.95rem;
-color: #9ca3af;
-}
+        .tagline {
+            font-size: 0.95rem;
+            color: #d67a9e;
+        }
 
-.contact a {
-color: #38bdf8;
-text-decoration: none;
-font-size: 0.9rem;
-}
+        .contact a {
+            color: #ff7faa;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
 
-.contact a:hover {
-text-decoration: underline;
-}
+        .contact a:hover {
+            text-decoration: underline;
+        }
 
-.section {
-margin-bottom: 20px;
-}
+        .section {
+            margin-bottom: 20px;
+        }
 
-.section-title {
-font-size: 1.1rem;
-margin-bottom: 8px;
-font-weight: 600;
-border-left: 4px solid #38bdf8;
-padding-left: 8px;
-}
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            border-left: 5px solid #ff8fb0; /* 粉色重點線 */
+            padding-left: 10px;
+            color: #ff5f8d;
+        }
 
-.pill-list {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-top: 8px;
-}
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
 
-.pill {
-border-radius: 999px;
-padding: 6px 12px;
-font-size: 0.85rem;
-background: #111827;
-border: 1px solid #1f2937;
-}
+        .pill {
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            background: #ffe1eb; /* 粉色貼紙 */
+            border: 1px solid #ffc8d9;
+            color: #ff5c8c;
+        }
 
-.item-title {
-font-weight: 600;
-font-size: 0.95rem;
-}
+        .item-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #ff6f9c;
+        }
 
-.item-sub {
-font-size: 0.85rem;
-color: #9ca3af;
-}
+        .item-sub {
+            font-size: 0.85rem;
+            color: #d488a3;
+        }
 
-.item {
-margin-bottom: 10px;
-}
+        .item {
+            margin-bottom: 12px;
+        }
 
-.btn {
-margin-top: 10px;
-padding: 6px 12px;
-border-radius: 999px;
-font-size: 0.85rem;
-border: none;
-cursor: pointer;
-background: #38bdf8;
-color: #0f172a;
-}
+        .btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            border: none;
+            cursor: pointer;
+            background: #ff8fb0;
+            color: white;
+            transition: 0.2s;
+        }
 
-.btn:hover {
-opacity: 0.9;
-}
+        .btn:hover {
+            background: #ff759c;
+        }
 
-.hidden {
-display: none;
-}
+        .hidden {
+            display: none;
+        }
 
-footer {
-margin-top: 20px;
-font-size: 0.8rem;
-color: #6b7280;
-text-align: center;
-}
-
-@media (max-width: 600px) {
-header {
-flex-direction: row;
-align-items: flex-start;
-}
-}
-</style>
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #c27b92;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-<header>
-<div class="avatar"></div>
-<div>
-<h1>Mini Pan</h1>
-<p class="tagline">Social Work Student · Curious Learner · Future Helper</p>
-<p class="contact">
-Email: <a href="mailto:shanis,pan@gmail.com@egmail.com">your_email@example.com</a>
-<!-- 記得把信箱改成你自己的 -->
-</p>
-</div>
-</header>
+    <header>
+        <div class="avatar"></div>
+        <div>
+            <h1>潘穎宣</h1>
+            <p class="tagline">亞洲大學 社工系二年級 · 團隊合作 & 溝通擅長 · 印度海外服務經驗</p>
+            <p class="contact">
+                Email: <a href="mailto:shanis.pan@gmail.com">shanis.pan@gmail.com</a>
+            </p>
+        </div>
+    </header>
 
-<section class="section">
-<h2 class="section-title">About Me 關於我</h2>
-<p style="margin-top: 6px; font-size: 0.95rem;">
-I am a social work student who enjoys learning new technology,
-especially tools that can help people and improve daily life.
-我目前就讀社工系，喜歡挑戰新事物，也希望未來能把程式與社會工作結合，
-讓服務對象獲得更方便的資源與支持。
-</p>
-</section>
+    <section class="section">
+        <h2 class="section-title">關於我 About Me</h2>
+        <p style="margin-top: 6px; font-size: 1rem;">
+            我是潘穎宣，目前就讀亞洲大學社工系二年級，擅長團隊合作、溝通表達，也喜歡參與不同文化相關的活動。
+            我曾前往印度參與海外志工服務，與當地兒少與婦女進行課程與互動，讓我學到跨文化溝通的能力，也更確定未來想投入助人工作的目標。
+            希望老師給我過！我會繼續努力學習，也會把這次的經驗當作提升自己的動力。
+        </p>
+    </section>
 
-<section class="section">
-<h2 class="section-title">Education 學歷</h2>
-<div class="item">
-<div class="item-title">Asia University, Department of Social Work（亞洲大學 社會工作學系）</div>
-<div class="item-sub">2024 – Present</div>
-<p style="font-size: 0.9rem;">
-Major courses: Social Casework, Community Development, Family Law, etc.
-主修社會個案工作、社區發展與家庭法相關課程。
-</p>
-</div>
-</section>
+    <section class="section">
+        <h2 class="section-title">學歷 Education</h2>
+        <div class="item">
+            <div class="item-title">亞洲大學 社會工作學系</div>
+            <div class="item-sub">2024 – Now</div>
+            <p style="font-size: 0.95rem;">
+                目前為大二學生，修習個案工作、社區發展、家庭法、身心障礙者社會工作等課程。
+            </p>
+        </div>
+    </section>
 
-<section class="section">
-<h2 class="section-title">Skills 技能</h2>
-<div class="pill-list">
-<span class="pill">HTML &amp; CSS (basic)</span>
-<span class="pill">JavaScript (basic)</span>
-<span class="pill">Git &amp; GitHub (beginner)</span>
-<span class="pill">Teamwork 團隊合作</span>
-<span class="pill">Communication 溝通表達</span>
-<span class="pill">Report Writing 報告撰寫</span>
-</div>
-<button class="btn" id="toggleMore">顯示更多 / Show more</button>
-<div id="moreSkills" class="hidden" style="margin-top: 8px; font-size: 0.9rem;">
-I am still learning but I enjoy trying, making mistakes, and improving step by step.
-我還在學習中，但願意多嘗試、多犯錯，慢慢把自己變得更好。
-</div>
-</section>
+    <section class="section">
+        <h2 class="section-title">技能 Skills</h2>
+        <div class="pill-list">
+            <span class="pill">團隊合作</span>
+            <span class="pill">溝通表達</span>
+            <span class="pill">海外服務經驗</span>
+            <span class="pill">簡報能力</span>
+            <span class="pill">Html / Css / Js（基礎）</span>
+            <span class="pill">Git & Github（基礎）</span>
+        </div>
+    </section>
 
-<section class="section">
-<h2 class="section-title">Experience 經驗</h2>
-<div class="item">
-<div class="item-title">Department & Club Activities 系上與社團活動</div>
-<div class="item-sub">2024 – Present</div>
-<p style="font-size: 0.9rem;">
-Participated in volunteer activities, group projects, and campus events.
-參與志工服務、小組報告與系上活動，學習與不同背景的人合作與溝通。
-</p>
-</div>
-<div class="item">
-<div class="item-title">Volunteer Service 志工服務</div>
-<p style="font-size: 0.9rem;">
-Joined community and school service activities, helping children and older adults.
-曾參與社區與學校服務活動，陪伴兒童與長者，提升傾聽與同理能力。
-</p>
-</div>
-</section>
+    <section class="section">
+        <h2 class="section-title">經驗 Experience</h2>
+        <div class="item">
+            <div class="item-title">印度海外志工服務</div>
+            <div class="item-sub">2025</div>
+            <p style="font-size: 0.95rem;">
+                與兒少與婦女進行課程帶領、繪本活動及文化交流，提升跨文化溝通與教學能力。
+            </p>
+        </div>
 
-<section class="section">
-<h2 class="section-title">Contact 聯絡方式</h2>
-<p style="font-size: 0.9rem;">
-If you would like to know more about me, feel free to contact me by email.
-如果想更了解我，歡迎用 Email 與我聯絡。
-</p>
-</section>
+        <div class="item">
+            <div class="item-title">校內課程與團隊合作</div>
+            <div class="item-sub">2024 – Now</div>
+            <p style="font-size: 0.95rem;">
+                多次小組報告與課程合作，負責溝通協調、資料整理與呈現。
+            </p>
+        </div>
+    </section>
 
-<footer>
-Self-intro resume for GitHub Pages · Created for autonomous learning homework.
-</footer>
+    <section class="section">
+        <h2 class="section-title">聯絡方式 Contact</h2>
+        <p style="font-size: 0.95rem;">
+            歡迎用 Email 與我聯繫，如有需要我也很樂意分享志工與學習經驗！
+        </p>
+    </section>
+
+    <footer>
+        Resume Website · Created for GitHub Pages Assignment
+    </footer>
 </div>
-
-<script>
-const btn = document.getElementById('toggleMore');
-const box = document.getElementById('moreSkills');
-btn.addEventListener('click', () => {
-if (box.classList.contains('hidden')) {
-box.classList.remove('hidden');
-btn.textContent = '收起 / Show less';
-} else {
-box.classList.add('hidden');
-btn.textContent = '顯示更多 / Show more';
-}
-});
-</script>
 </body>
 </html>
