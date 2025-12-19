@@ -13,7 +13,7 @@
         }
 
         body {
-            background: #ffeef4; /* 柔和粉底 */
+            background: #ffeef4; /* 淡粉紅背景 */
             color: #5b5b5b;
             line-height: 1.7;
             padding: 24px;
@@ -34,33 +34,39 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 16px;
-            border-bottom: 2px solid #ffb6c9; /* 粉紅底線 */
+            border-bottom: 2px solid #ffb6c9;
             padding-bottom: 16px;
             margin-bottom: 20px;
         }
 
         .avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #ffb6c9, #ff8fb0); /* 粉紅漸層 */
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;  /* 圓形 */
+            object-fit: cover;   /* 自動裁切不變形 */
+            border: 4px solid #ffb6c9; /* 粉紅外框 */
         }
 
         h1 {
-            font-size: 1.8rem;
-            letter-spacing: 0.04em;
+            font-size: 1.9rem;
+            letter-spacing: 0.08em;
             color: #ff6f9c;
         }
 
         .tagline {
             font-size: 0.95rem;
             color: #d67a9e;
+            margin-top: 4px;
+        }
+
+        .contact {
+            margin-top: 6px;
+            font-size: 0.9rem;
         }
 
         .contact a {
             color: #ff7faa;
             text-decoration: none;
-            font-size: 0.9rem;
         }
 
         .contact a:hover {
@@ -68,14 +74,14 @@
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .section-title {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
             font-weight: 600;
-            border-left: 5px solid #ff8fb0; /* 粉色重點線 */
+            border-left: 5px solid #ff8fb0;
             padding-left: 10px;
             color: #ff5f8d;
         }
@@ -91,9 +97,13 @@
             border-radius: 999px;
             padding: 6px 14px;
             font-size: 0.85rem;
-            background: #ffe1eb; /* 粉色貼紙 */
+            background: #ffe1eb;
             border: 1px solid #ffc8d9;
             color: #ff5c8c;
+        }
+
+        .item {
+            margin-bottom: 12px;
         }
 
         .item-title {
@@ -105,30 +115,7 @@
         .item-sub {
             font-size: 0.85rem;
             color: #d488a3;
-        }
-
-        .item {
-            margin-bottom: 12px;
-        }
-
-        .btn {
-            margin-top: 10px;
-            padding: 8px 16px;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            border: none;
-            cursor: pointer;
-            background: #ff8fb0;
-            color: white;
-            transition: 0.2s;
-        }
-
-        .btn:hover {
-            background: #ff759c;
-        }
-
-        .hidden {
-            display: none;
+            margin-bottom: 4px;
         }
 
         footer {
@@ -137,27 +124,40 @@
             color: #c27b92;
             text-align: center;
         }
+
+        @media (max-width: 600px) {
+            header {
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <header>
-        <div class="avatar"></div>
+        <!-- 這裡放你的照片，檔名是「未命名.jpg」 -->
+        <img class="avatar" src="未命名.jpg" alt="潘穎宣的照片">
+
         <div>
             <h1>潘穎宣</h1>
-            <p class="tagline">亞洲大學 社工系二年級 · 團隊合作 & 溝通擅長 · 印度海外服務經驗</p>
+            <p class="tagline">
+                亞洲大學 社工系二年級 · 擅長團隊合作與溝通 · 具印度海外服務經驗
+            </p>
             <p class="contact">
-                Email: <a href="mailto:shanis.pan@gmail.com">shanis.pan@gmail.com</a>
+                Email：<a href="mailto:shanis.pan@gmail.com">shanis.pan@gmail.com</a>
             </p>
         </div>
     </header>
 
     <section class="section">
         <h2 class="section-title">關於我 About Me</h2>
-        <p style="margin-top: 6px; font-size: 1rem;">
-            我是潘穎宣，目前就讀亞洲大學社工系二年級，擅長團隊合作、溝通表達，也喜歡參與不同文化相關的活動。
-            我曾前往印度參與海外志工服務，與當地兒少與婦女進行課程與互動，讓我學到跨文化溝通的能力，也更確定未來想投入助人工作的目標。
-            希望老師給我過！我會繼續努力學習，也會把這次的經驗當作提升自己的動力。
+        <p style="margin-top: 6px; font-size: 0.98rem;">
+            大家好，我是潘穎宣，目前就讀亞洲大學社會工作學系二年級。平常喜歡和人互動，
+            在團隊裡擅長溝通協調，也樂於把大家的想法整理在一起。<br><br>
+            我曾到印度參與海外志工服務，和當地兒少與婦女一起上課、畫繪本、做活動，
+            讓我學會在陌生環境中勇敢開口、主動關心別人，也更確定自己想往助人工作發展。
+            這次的作業是我第一次把程式、GitHub 和履歷結合在一起，雖然還在摸索，但真的很認真在學習。
+            也希望老師可以給我過，我會繼續努力進步！🥺
         </p>
     </section>
 
@@ -165,9 +165,10 @@
         <h2 class="section-title">學歷 Education</h2>
         <div class="item">
             <div class="item-title">亞洲大學 社會工作學系</div>
-            <div class="item-sub">2024 – Now</div>
+            <div class="item-sub">二年級 · 2024 – Now</div>
             <p style="font-size: 0.95rem;">
-                目前為大二學生，修習個案工作、社區發展、家庭法、身心障礙者社會工作等課程。
+                主要修習社會個案工作、社會組織與社區發展、家庭法、身心障礙者社會工作導論等相關課程，
+                建立對社會福利制度與助人專業的基礎理解。
             </p>
         </div>
     </section>
@@ -177,28 +178,32 @@
         <div class="pill-list">
             <span class="pill">團隊合作</span>
             <span class="pill">溝通表達</span>
-            <span class="pill">海外服務經驗</span>
-            <span class="pill">簡報能力</span>
-            <span class="pill">Html / Css / Js（基礎）</span>
-            <span class="pill">Git & Github（基礎）</span>
+            <span class="pill">同理心與傾聽</span>
+            <span class="pill">海外服務經驗（印度）</span>
+            <span class="pill">簡報與報告製作</span>
+            <span class="pill">HTML / CSS / JavaScript（基礎）</span>
+            <span class="pill">Git &amp; GitHub（基礎）</span>
         </div>
     </section>
 
     <section class="section">
         <h2 class="section-title">經驗 Experience</h2>
+
         <div class="item">
             <div class="item-title">印度海外志工服務</div>
             <div class="item-sub">2025</div>
             <p style="font-size: 0.95rem;">
-                與兒少與婦女進行課程帶領、繪本活動及文化交流，提升跨文化溝通與教學能力。
+                參與兒少與婦女課程設計與帶領，包含情緒表達、繪本創作與團體活動。
+                在跨文化環境中練習用英文與肢體溝通，也學會尊重不同文化與生活方式。
             </p>
         </div>
 
         <div class="item">
-            <div class="item-title">校內課程與團隊合作</div>
+            <div class="item-title">課堂報告與小組合作</div>
             <div class="item-sub">2024 – Now</div>
             <p style="font-size: 0.95rem;">
-                多次小組報告與課程合作，負責溝通協調、資料整理與呈現。
+                在多門社工相關課程中負責資料搜尋、內容統整與口頭報告，
+                與組員一起分工、討論與練習，培養協調與表達能力。
             </p>
         </div>
     </section>
@@ -206,12 +211,13 @@
     <section class="section">
         <h2 class="section-title">聯絡方式 Contact</h2>
         <p style="font-size: 0.95rem;">
-            歡迎用 Email 與我聯繫，如有需要我也很樂意分享志工與學習經驗！
+            如果想更了解我的學習與服務經驗，歡迎用 Email 與我聯繫。
+            也期待未來有更多機會，在不同的實務場域繼續學習成長。
         </p>
     </section>
 
     <footer>
-        Resume Website · Created for GitHub Pages Assignment
+        Resume Website · Created by 潘穎宣 for Git &amp; GitHub 自主學習作業
     </footer>
 </div>
 </body>
